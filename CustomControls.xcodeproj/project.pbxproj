@@ -12,6 +12,10 @@
 		48DD2E721DB7D53E005DE752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DD2E701DB7D53E005DE752 /* Main.storyboard */; };
 		48DD2E741DB7D53E005DE752 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48DD2E731DB7D53E005DE752 /* Assets.xcassets */; };
 		48DD2E771DB7D53E005DE752 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DD2E751DB7D53E005DE752 /* LaunchScreen.storyboard */; };
+		48DD2E7F1DB7D557005DE752 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD2E7E1DB7D557005DE752 /* Extensions.swift */; };
+		48DD2E861DB7D5E4005DE752 /* CCToggleSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD2E841DB7D5E4005DE752 /* CCToggleSwitch.swift */; };
+		48DD2E871DB7D5E4005DE752 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD2E851DB7D5E4005DE752 /* CircularProgressView.swift */; };
+		48DD2E891DB7E122005DE752 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD2E881DB7E122005DE752 /* InitialViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		48DD2E731DB7D53E005DE752 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48DD2E761DB7D53E005DE752 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48DD2E781DB7D53E005DE752 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48DD2E7E1DB7D557005DE752 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		48DD2E841DB7D5E4005DE752 /* CCToggleSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CCToggleSwitch.swift; sourceTree = "<group>"; };
+		48DD2E851DB7D5E4005DE752 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		48DD2E881DB7E122005DE752 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,50 @@
 		48DD2E6B1DB7D53E005DE752 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
-				48DD2E6C1DB7D53E005DE752 /* AppDelegate.swift */,
-				48DD2E6E1DB7D53E005DE752 /* ViewController.swift */,
 				48DD2E701DB7D53E005DE752 /* Main.storyboard */,
-				48DD2E731DB7D53E005DE752 /* Assets.xcassets */,
+				48DD2E821DB7D58F005DE752 /* Controllers */,
+				48DD2E831DB7D598005DE752 /* Library */,
+				48DD2E811DB7D57D005DE752 /* Resources */,
+				48DD2E801DB7D571005DE752 /* Supporting Files */,
+			);
+			path = CustomControls;
+			sourceTree = "<group>";
+		};
+		48DD2E801DB7D571005DE752 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48DD2E6C1DB7D53E005DE752 /* AppDelegate.swift */,
 				48DD2E751DB7D53E005DE752 /* LaunchScreen.storyboard */,
 				48DD2E781DB7D53E005DE752 /* Info.plist */,
 			);
-			path = CustomControls;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48DD2E811DB7D57D005DE752 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				48DD2E731DB7D53E005DE752 /* Assets.xcassets */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		48DD2E821DB7D58F005DE752 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				48DD2E6E1DB7D53E005DE752 /* ViewController.swift */,
+				48DD2E881DB7E122005DE752 /* InitialViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		48DD2E831DB7D598005DE752 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				48DD2E841DB7D5E4005DE752 /* CCToggleSwitch.swift */,
+				48DD2E851DB7D5E4005DE752 /* CircularProgressView.swift */,
+				48DD2E7E1DB7D557005DE752 /* Extensions.swift */,
+			);
+			name = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +181,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DD2E6F1DB7D53E005DE752 /* ViewController.swift in Sources */,
+				48DD2E861DB7D5E4005DE752 /* CCToggleSwitch.swift in Sources */,
+				48DD2E7F1DB7D557005DE752 /* Extensions.swift in Sources */,
+				48DD2E891DB7E122005DE752 /* InitialViewController.swift in Sources */,
+				48DD2E871DB7D5E4005DE752 /* CircularProgressView.swift in Sources */,
 				48DD2E6D1DB7D53E005DE752 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
