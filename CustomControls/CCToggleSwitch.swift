@@ -12,7 +12,7 @@ import UIKit
     
     var imageView: UIImageView!
 
-    @IBInspectable var on: Bool = false {
+    @IBInspectable var isOn: Bool = false {
         didSet {
             setNeedsLayout()
         }
@@ -40,31 +40,7 @@ import UIKit
         setupControl()
     }
     
-    @objc private func togglePan(gesture: UIPanGestureRecognizer) {
-        switch gesture.state {
-        case .changed:
-            let location = gesture.location(in: self)
-            if location.y < bounds.height / 2 {
-                if !on {
-                    on = true
-                    sendActions(for: .valueChanged)
-                }
-            }
-            else {
-                if on {
-                    on = false
-                    sendActions(for: .valueChanged)
-                }
-            }
-            break
-            
-        default:
-            break
-        }
-    }
-    
     func setupControl() {
-        
         // add the Image View
         imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -76,7 +52,7 @@ import UIKit
             target: self,
             action: #selector(togglePan(gesture:))
         )
-            
+        
         addGestureRecognizer(panGesture)
         
         setNeedsLayout()
@@ -85,10 +61,35 @@ import UIKit
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        backgroundColor = UIColor.clear
+        
         guard imageView != nil else { return }
         
         imageView.frame = self.bounds
-        imageView.image = on ? imageOn : imageOff
+        imageView.image = isOn ? imageOn : imageOff
+    }
+    
+    @objc private func togglePan(gesture: UIPanGestureRecognizer) {
+        switch gesture.state {
+        case .changed:
+            let location = gesture.location(in: self)
+            if location.y < bounds.height / 2 {
+                if !isOn {
+                    isOn = true
+                    sendActions(for: .valueChanged)
+                }
+            }
+            else {
+                if isOn {
+                    isOn = false
+                    sendActions(for: .valueChanged)
+                }
+            }
+            break
+            
+        default:
+            break
+        }
     }
     
     override var intrinsicContentSize: CGSize {

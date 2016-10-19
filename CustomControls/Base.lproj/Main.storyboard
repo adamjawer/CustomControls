@@ -9,7 +9,7 @@
         <!--Initial View Controller-->
         <scene sceneID="ZIW-Zw-Fa1">
             <objects>
-                <viewController id="iJo-Qk-szI" customClass="InitialViewController" customModule="CustomControls" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InititalViewController" id="iJo-Qk-szI" customClass="InitialViewController" customModule="CustomControls" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qK7-Ov-TYt"/>
                         <viewControllerLayoutGuide type="bottom" id="yfv-za-3so"/>
@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K9e-Yu-NvE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-102" y="-1298"/>
+            <point key="canvasLocation" x="-103.2" y="-1299.400299850075"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -36,10 +36,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-qm-h6X" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="66" minY="167" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zz6-qm-h6X" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="KQK-7W-3fg"/>
+                                    <constraint firstAttribute="width" constant="100" id="gNX-8i-JhW"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.94999999999999996"/>
@@ -59,10 +61,12 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enabled" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GXK-pi-wIb" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="209" minY="28" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXK-pi-wIb" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="R9x-K2-5uD"/>
+                                    <constraint firstAttribute="height" constant="100" id="tCp-rG-FpT"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.40000000000000002"/>
@@ -81,10 +85,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2sA-ut-0R7" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="66" minY="28" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2sA-ut-0R7" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="s26-cT-H61"/>
+                                    <constraint firstAttribute="height" constant="100" id="yZ5-MD-1rQ"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="progress">
                                         <real key="value" value="0.85999999999999999"/>
@@ -103,10 +109,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FA0-bb-OVG" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="209" minY="167" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FA0-bb-OVG" customClass="CircularProgressView" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BfO-Nh-eML"/>
+                                    <constraint firstAttribute="width" constant="100" id="Tsp-vx-xbw"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                         <real key="value" value="8"/>
@@ -126,9 +134,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZO7-72-nOF" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="319" minY="43" width="40" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view opaque="NO" tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZO7-72-nOF" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="imageOn" value="ToggleOn"/>
@@ -139,9 +145,7 @@
                                     <action selector="switchToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="jZP-1x-Dqf"/>
                                 </connections>
                             </view>
-                            <view tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqM-l0-NtN" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="18" minY="182" width="40" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qqM-l0-NtN" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="imageOn" value="ToggleOn"/>
@@ -152,9 +156,7 @@
                                     <action selector="switchToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="Ohh-EZ-25Z"/>
                                 </connections>
                             </view>
-                            <view tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eYc-hI-k3O" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="319" minY="182" width="40" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYc-hI-k3O" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="imageOn" value="ToggleOn"/>
@@ -165,9 +167,7 @@
                                     <action selector="switchToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="zyZ-g8-N4T"/>
                                 </connections>
                             </view>
-                            <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptD-qB-Akg" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
-                                <frame key="frameInset" minX="18" minY="43" width="40" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ptD-qB-Akg" customClass="CCToggleSwitch" customModule="CustomControls" customModuleProvider="target">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="imageOn" value="ToggleOn"/>
@@ -178,19 +178,70 @@
                                     <action selector="switchToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="yxc-M3-46b"/>
                                 </connections>
                             </view>
+                            <slider opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="nyX-xv-Uu2">
+                                <frame key="frameInset" minX="14" minY="333" width="165" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="k34-1Z-i6N"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="csS-WO-KSV">
+                                <frame key="frameInset" minX="16" minY="136" width="165" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="sEt-66-EcA"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OxG-Fk-fuZ">
+                                <frame key="frameInset" minX="195" minY="333" width="165" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="OGN-IF-TOv"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3Df-Kw-xv6">
+                                <frame key="frameInset" minX="195" minY="136" width="165" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="RzO-Vb-MR4"/>
+                                </connections>
+                            </slider>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qqM-l0-NtN" firstAttribute="centerY" secondItem="Zz6-qm-h6X" secondAttribute="centerY" id="0ik-gD-9Ic"/>
+                            <constraint firstItem="2sA-ut-0R7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7lf-P3-JT4"/>
+                            <constraint firstItem="ptD-qB-Akg" firstAttribute="centerY" secondItem="2sA-ut-0R7" secondAttribute="centerY" id="Izu-dM-diO"/>
+                            <constraint firstItem="GXK-pi-wIb" firstAttribute="top" secondItem="2sA-ut-0R7" secondAttribute="top" id="JKT-U1-hSd"/>
+                            <constraint firstItem="FA0-bb-OVG" firstAttribute="top" secondItem="Zz6-qm-h6X" secondAttribute="top" id="JNT-ri-aWi"/>
+                            <constraint firstItem="2sA-ut-0R7" firstAttribute="leading" secondItem="ptD-qB-Akg" secondAttribute="trailing" constant="19" id="O4U-y2-Vb4"/>
+                            <constraint firstItem="eYc-hI-k3O" firstAttribute="leading" secondItem="FA0-bb-OVG" secondAttribute="trailing" constant="22" id="eTe-rw-qvq"/>
+                            <constraint firstItem="FA0-bb-OVG" firstAttribute="leading" secondItem="Zz6-qm-h6X" secondAttribute="trailing" constant="20" id="em2-dL-ijH"/>
+                            <constraint firstItem="2sA-ut-0R7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-60.5" id="gIA-so-WoI"/>
+                            <constraint firstItem="Zz6-qm-h6X" firstAttribute="leading" secondItem="2sA-ut-0R7" secondAttribute="leading" id="haa-Of-3Yd"/>
+                            <constraint firstItem="eYc-hI-k3O" firstAttribute="centerY" secondItem="FA0-bb-OVG" secondAttribute="centerY" id="iBn-60-otQ"/>
+                            <constraint firstItem="Zz6-qm-h6X" firstAttribute="leading" secondItem="qqM-l0-NtN" secondAttribute="trailing" constant="19" id="jIQ-Xj-sLC"/>
+                            <constraint firstItem="2sA-ut-0R7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jdU-0z-dk3"/>
+                            <constraint firstItem="GXK-pi-wIb" firstAttribute="leading" secondItem="2sA-ut-0R7" secondAttribute="trailing" constant="20" id="oij-37-bON"/>
+                            <constraint firstItem="ZO7-72-nOF" firstAttribute="centerY" secondItem="GXK-pi-wIb" secondAttribute="centerY" id="s6g-S6-4W4"/>
+                            <constraint firstItem="Zz6-qm-h6X" firstAttribute="top" secondItem="2sA-ut-0R7" secondAttribute="bottom" constant="100" id="tZA-3c-sdI"/>
+                            <constraint firstItem="ZO7-72-nOF" firstAttribute="leading" secondItem="GXK-pi-wIb" secondAttribute="trailing" constant="22" id="wQY-HW-Plp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="progressView_1" destination="2sA-ut-0R7" id="DVF-IM-5CD"/>
                         <outlet property="progressView_2" destination="GXK-pi-wIb" id="EXO-om-tzG"/>
                         <outlet property="progressView_3" destination="Zz6-qm-h6X" id="kX6-74-82x"/>
                         <outlet property="progressView_4" destination="FA0-bb-OVG" id="T5m-Jl-URV"/>
+                        <outlet property="slider1" destination="csS-WO-KSV" id="2fG-NI-aiA"/>
+                        <outlet property="slider2" destination="3Df-Kw-xv6" id="bLn-mC-bcI"/>
+                        <outlet property="slider3" destination="nyX-xv-Uu2" id="zav-9D-uIx"/>
+                        <outlet property="slider4" destination="OxG-Fk-fuZ" id="dZM-xp-9uL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142" y="-235"/>
+            <point key="canvasLocation" x="-143.19999999999999" y="-235.23238380809596"/>
         </scene>
     </scenes>
     <resources>

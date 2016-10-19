@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		484674071DB7EE0300276DCD /* SquarePair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 484674061DB7EE0300276DCD /* SquarePair.swift */; };
 		48DD2E6D1DB7D53E005DE752 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD2E6C1DB7D53E005DE752 /* AppDelegate.swift */; };
 		48DD2E6F1DB7D53E005DE752 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48DD2E6E1DB7D53E005DE752 /* ViewController.swift */; };
 		48DD2E721DB7D53E005DE752 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DD2E701DB7D53E005DE752 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		484674061DB7EE0300276DCD /* SquarePair.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquarePair.swift; sourceTree = "<group>"; };
 		48DD2E691DB7D53E005DE752 /* CustomControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DD2E6C1DB7D53E005DE752 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48DD2E6E1DB7D53E005DE752 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				48DD2E841DB7D5E4005DE752 /* CCToggleSwitch.swift */,
 				48DD2E851DB7D5E4005DE752 /* CircularProgressView.swift */,
 				48DD2E7E1DB7D557005DE752 /* Extensions.swift */,
+				484674061DB7EE0300276DCD /* SquarePair.swift */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 				48DD2E861DB7D5E4005DE752 /* CCToggleSwitch.swift in Sources */,
 				48DD2E7F1DB7D557005DE752 /* Extensions.swift in Sources */,
 				48DD2E891DB7E122005DE752 /* InitialViewController.swift in Sources */,
+				484674071DB7EE0300276DCD /* SquarePair.swift in Sources */,
 				48DD2E871DB7D5E4005DE752 /* CircularProgressView.swift in Sources */,
 				48DD2E6D1DB7D53E005DE752 /* AppDelegate.swift in Sources */,
 			);
@@ -345,6 +349,7 @@
 				48DD2E7D1DB7D53E005DE752 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

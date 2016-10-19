@@ -20,7 +20,7 @@ class CircularProgressView: UIView {
         didSet { setNeedsDisplay() }
     }
     
-    private var _progress: Float = 0.0
+    private var _progress: Float = 0.25
     
     @IBInspectable var progress: Float {
         get {
@@ -44,7 +44,7 @@ class CircularProgressView: UIView {
         didSet { setNeedsDisplay() }
     }
 
-    @IBInspectable var fontSize: CGFloat = 10 {
+    @IBInspectable var fontSize: CGFloat = 20 {
         didSet { setNeedsDisplay() }
     }
     
@@ -62,14 +62,23 @@ class CircularProgressView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        // clip the control to the circle that fits in the rectangle
+        let diameter = min(bounds.width, bounds.height)
+        let clipRect = CGRect(
+            x: (bounds.width - diameter) / 2,
+            y: (bounds.height - diameter) / 2,
+            width: diameter,
+            height: diameter
+        )
+        
+        let path = UIBezierPath(ovalIn: clipRect)
+        let maskLayer = CAShapeLayer()
+        maskLayer.path = path.cgPath
+        layer.mask = maskLayer
+        
+        // redraw the control if the bounds changed
         setNeedsDisplay()
     }
-
-//    override func prepareForInterfaceBuilder() {
-//        super.prepareForInterfaceBuilder()
-//        
-//        lineWidth = 20
-//    }
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
@@ -116,7 +125,9 @@ class CircularProgressView: UIView {
         context?.setLineWidth(lineWidth)
         context?.strokeEllipse(in: drawRect)
         
-        // Draw the indicator
+        //
+        // Draw the progress indicator
+        //
         let circlePath = UIBezierPath(
             arcCenter: drawRect.center,
             radius: diameter / 2,
